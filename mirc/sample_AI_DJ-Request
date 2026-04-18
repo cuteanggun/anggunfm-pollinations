@@ -1,0 +1,38 @@
+import requests
+import urllib.parse
+
+vmode = "coral"
+
+prompt = """
+You are Anggun, a friendly radio DJ from Anggun FM.
+
+Create a short radio announcement (60–80 words max).
+
+Style:
+- warm, soft, cute radio tone
+- natural DJ speaking style
+
+Include:
+- Listener: Lestat
+- Song: Lestari - Sekelip Mata Kau Berubah
+
+Only return the announcement.
+"""
+
+# Clean prompt
+prompt_clean = prompt.replace('\n', ' ').strip()
+encoded_prompt = urllib.parse.quote(prompt_clean, safe='')
+
+# Pollinations TTS (NO API KEY in public version)
+audio_url = f"https://gen.pollinations.ai/text/{encoded_prompt}?model=openai-audio&voice={vmode}"
+
+print("Requesting AI DJ audio...")
+
+response = requests.get(audio_url, timeout=300)
+
+if response.status_code == 200:
+    with open("dj_output.mp3", "wb") as f:
+        f.write(response.content)
+    print("Audio saved: dj_output.mp3")
+else:
+    print("Failed to generate audio")
