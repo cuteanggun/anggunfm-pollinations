@@ -1,51 +1,60 @@
-# anggunfm-pollinations
-AnggunFM IRC radio integration with Pollinations AI
-
 # AnggunFM Pollinations Integration
 
-AnggunFM is a non-profit IRC-based radio project that integrates Pollinations AI.
+AnggunFM is a non-profit IRC-based radio project that integrates AI features using Pollinations AI.
+
+It provides automation tools for IRC radio including AI DJ, image generation, and song metadata formatting.
+
+---
 
 ## Features
 
-- 🎧 AI DJ (Text-to-Speech using Pollinations)
-- 🖼️ Image generation command (`!gen`)
+- 🎧 AI DJ (Text-to-Speech)
+- 🖼️ Image generation via IRC command
 - 🎵 Song title formatter (artist - title)
+- 📻 Radio request system (experimental)
+
+---
 
 ## Tech Stack
 
 - mIRC scripting
 - Python (requests)
-- Pollinations API
+- Pollinations AI API
 
-## Example Usage
+---
 
-### IRC Command
-!gen a cute anime girl with sunset
+## IRC Commands
+
+### 🖼️ Image Generation
+
+Command:
+```text id="img_cmd_01"
+!gen <prompt>
+
+Example:
+
+!gen a cute anime girl standing under sunset sky
+
+Result:
+
+https://image.pollinations.ai/prompt/a cute anime girl standing under sunset sky
 
 
-### Output
+🎵 Song Title Formatter
 
-https://image.pollinations.ai/prompt/a cute anime girl with sunset
+Command:
 
+!f <title>
 
+Example:
 
+!f Lara Fabian Je T'aime Lyrics
 
-## Notes
+Result:
 
-This repository contains simplified examples of the integration.
+Lara Fabian - Je T'aime
+📻 Radio Request (Experimental)
 
-Full production system includes:
-- rate limiting
-- filtering
-- point system
-- backend automation
+Command:
 
-These parts are kept private.
-
-## Project
-
-Non-profit project by AnggunFM  
-https://www.anggunfm.my
-
-GitHub:
-https://github.com/cuteanggun
+!r <selected song number>
