@@ -1,4 +1,21 @@
 # AnggunFM Pollinations Integration
+This repository contains simplified examples of the integration.
+
+Full production system includes:
+- rate limiting
+- filtering
+- point system
+- backend automation
+
+These parts are kept private.
+
+## Project
+
+Non-profit project by AnggunFM  
+https://www.anggunfm.my
+
+GitHub:
+https://github.com/cuteanggun
 
 AnggunFM is a non-profit IRC-based radio project that integrates AI features using Pollinations AI.
 
@@ -58,3 +75,8 @@ Lara Fabian - Je T'aime
 Command:
 
 !r <selected song number>
+
+
+## Notes
+
+
