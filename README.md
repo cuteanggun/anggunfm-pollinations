@@ -12,7 +12,7 @@ These parts are kept private.
 ## Project
 
 Non-profit project by AnggunFM  
-https://www.anggunfm.my
+https://www.anggunfm.org
 
 GitHub:
 https://github.com/cuteanggun
